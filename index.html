@@ -12,18 +12,18 @@
         <h1>Business Empire</h1>
         <p>Büyük iş dünyasına adım at!</p>
 
-        <label for="ceoName">CEO İsmi:</label>
-        <input type="text" id="ceoName" placeholder="Adınızı girin"><br><br>
+        <label for="email">Gmail:</label>
+        <input type="email" id="email" placeholder="Gmail adresinizi girin"><br><br>
 
-        <label for="companyName">Şirket İsmi:</label>
-        <input type="text" id="companyName" placeholder="Şirketinizi girin"><br><br>
+        <label for="password">Parola:</label>
+        <input type="password" id="password" placeholder="Parolanızı girin"><br><br>
 
-        <button onclick="startGame()">Oyuna Başla</button>
+        <button onclick="login()">Giriş Yap</button>
     </div>
 
     <!-- Oyun Paneli -->
     <div id="gamePanel" class="hidden">
-        <h2 id="gameTitle"></h2>
+        <h2 id="gameTitle">Şirket Yönetimi</h2>
         <p>Toplam Para: <span id="money">0</span> 💰</p>
         <p>Her Tıklama Kazancı: <span id="clickValue">1$</span></p>
         <button id="clickButton" onclick="earnMoney()">💸 Para Kazan!</button>
@@ -35,36 +35,32 @@
 
         <div id="passive" class="menuContent hidden">
             <h2>Pasif Gelir Yatırımları</h2>
-            <p>Pasif gelir yatırımları yaparak, işinizi büyütmek için her saniye kazanç elde edersiniz.</p>
-            <button onclick="buyInvestment('market')">🛒 Market Aç (500$) - +5$/saat</button>
+            <p>Pasif gelir yatırımları yaparak, işinizi büyütmek için her saat kazanç elde edersiniz.</p>
+            <button onclick="buyInvestment('market')">🛒 Market Aç (450$) - +5$/saat</button>
             <button onclick="buyInvestment('tech')">📱 Teknoloji Şirketi (2000$) - +20$/saat</button>
-            <button onclick="buyInvestment('logistics')">🚚 Lojistik Şirketi (5000$) - +50$/saat</button>
-            <button onclick="buyInvestment('transportation')">🚗 Ulaşım Şirketi (10000$) - +100$/saat</button>
-            <button onclick="buyInvestment('oil')">🛢️ Petrol Şirketi (20000$) - +200$/saat</button>
+            <button onclick="buyInvestment('logistics')">🚛 Lojistik Şirketi (15000$) - +150$/saat</button>
+            <button onclick="buyInvestment('transportation')">🚆 Taşımacılık Şirketi (30000$) - +300$/saat</button>
+            <button onclick="buyInvestment('oil')">🛢 Petrol Şirketi (50000$) - +500$/saat</button>
         </div>
 
         <div id="realEstate" class="menuContent hidden">
             <h2>Emlak Yatırımları</h2>
-            <p>Emlak sektörüne yatırım yaparak sabit gelir elde edebilir ve kazancınızı artırabilirsiniz.</p>
+            <p>Bu bölüm geliştirme aşamasındadır.</p>
         </div>
 
         <div id="crypto" class="menuContent hidden">
             <h2>Kripto Para Yatırımları</h2>
-            <p>Kripto paralara yatırım yaparak, değer artışlarından yararlanabilirsiniz. (Henüz geliştirme aşamasında.)</p>
+            <p>Kripto paralara yatırım yaparak değer artışlarından yararlanabilirsiniz. (Henüz geliştirme aşamasında.)</p>
         </div>
 
         <h3>Pasif Gelir:</h3>
         <p id="passiveIncome">0$/saat</p>
+
+        <button onclick="logout()">Çıkış Yap</button>
     </div>
 
-    <!-- Üstteki Mesaj -->
-    <div id="topMessage">
-        <p>Oyun hala beta versiyonunda, geliştirme gelecek. Oynadığınız için teşekkürler!</p>
-    </div>
-
-    <!-- Alt Bilgi (Footer) -->
     <div id="footer">
-        <p>Oyun Kurucusu: <a href="https://wa.me/90554026680" target="_blank">Nurmehemmed</a></p>
+        <p>Oyunun kurucusu <a href="https://wa.me/90554026680" target="_blank">Nurmehemmed</a></p>
     </div>
 
     <script src="script.js"></script>
